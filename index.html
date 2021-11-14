@@ -1,0 +1,39 @@
+<html ng-app="myApp" id="myApp">
+    <head>
+        <meta name="viewport" content="width=device-width" /> 
+        <title>Colombiana Inmobiliaria</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="./script_proyecto.js"></script>
+    </head>
+    <body ng-controller="myController">
+
+            <form>
+            <div class="form-group">
+                <h1>Bienvenido a Inmobiliaria Colombiana</h1>
+               <label for="valor">Cedula</label><br>
+               <input type="text" class="form-control input-lg text-center" placeholder="Ingrese la cedula" id="cedula" ng-model="formData.cedula"><br>
+               <label for="valor">Nombres</label><br>
+               <input type="text" class="form-control input-lg text-center" placeholder="Ingrese sus nombres" id="nombre" ng-model="formData.nombre"><br>
+               <label for="valor">Apellidos</label><br>
+               <input type="text" class="form-control input-lg text-center" placeholder="Ingrese sus apellidos" id="apellido" ng-model="formData.apellido"><br>
+               <label for="valor">Correo Electronico</label><br>
+               <input type="text" class="form-control input-lg text-center" placeholder="Ingrese su correo Electronico" id="correo" ng-model="formData.correo"><br>
+               <label for="valor">Celular</label><br>
+               <input type="text" class="form-control input-lg text-center" placeholder="Ingrese su celular" id="celular" ng-model="formData.celular"><br>
+               <h3>Establezca sus credenciales de inicio en la Aplicacion</h3>
+               <label for="valor">Usuario</label><br>
+               <input type="text" class="form-control input-lg text-center" placeholder="Ingrese su usuario" id="user" ng-model="formData.user"><br>
+               <label for="valor">Clave</label><br>
+               <input type="text" class="form-control input-lg text-center" placeholder="Ingrese una clave" id="clave" ng-model="formData.clave"><br>
+               
+               <br>
+            </div>
+            <button id="verificar" value="verificar">Verificar datos</button>
+            <button class="btn btn-primary btn-lg" ng-click="registrarUsuario()">Registrarse</button>
+            <button id="limpiar" value="limpiar">Limpiar campos</button>
+            <br>
+            {{registro}}
+            </form>
+        
+    </body>
+</html>
