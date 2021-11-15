@@ -2,7 +2,7 @@
 - Master Developers
 - 	Roles:
 -	Líder de equipo: Cristian Gómez.
--	Diseñador de software: Manuela Granda.
+-	Diseñador de software: Manuela Granada.
 -	Tester: Sebastián Sanabria.
 -	Diseñador UI:, Iván Galíndez. 
 -	Administrador de la configuración:  Juan Camilo.
