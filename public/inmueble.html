@@ -1,0 +1,40 @@
+<html ng-app="myApp" id="myApp">
+<head>
+    <meta name="viewport" content="width=device-width" /> 
+    <title>Master Inmobiliaria</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://kit.fontawesome.com/5d03531c1a.js" crossorigin="anonymous"></script>
+    <script src="./script_proyecto.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body ng-controller="myController">
+<div id="contenedor">
+    <header><nav>
+        <ul>
+            <li><a href="http://localhost:900/">Inicio</a></li>
+            <li><a href="./inmueble.html">Insertar inmueble </a></li>
+            <li><a href="./ubicacion.html">Insertar ubicacion</a></li>
+            <li><a href="javascript:;" id="lbtnTest">Llamar</a></li>
+        </ul>
+    </nav></header>
+            
+    <div class="menu">
+        <section id="contenido">
+            <form>
+                <h2>Registro Inmueble</h2>
+                <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Nombre" id="Nombre" ng-model="formData.Nombre"></p>
+                <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Tipo" id="Tipo" ng-model="formData.Tipo"></p>
+                <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Imagen" id="Imagen" ng-model="formData.Imagen"></p>
+                
+                <p><button class="button" ng-click="registrarUsuario()">Registrarse</button></p>
+
+                <br>
+                {{registro}}
+            </form>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>
