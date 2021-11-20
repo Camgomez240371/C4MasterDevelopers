@@ -3,19 +3,19 @@ var ngApp = angular.module('myApp', []);
  ngApp.controller('myController', function ($scope, $http) {
 
     $scope.getData = function () {
-                   return 'qubernet';
-                }
-                $scope.registrarUsuario = function () {
-                    $http
-                    .post("http://localhost:900/upload", $scope.formData)
-                    .then(function successCallback(response)  {
-                     // $scope.formData = {};
-                      $scope.registro = response.data;
-                      console.log(response);
-                    })
-                   
-                //   alert($scope.tel+" "+$scope.cedula)
-                  };
+        return 'qubernet';
+    }
+    $scope.registrarUsuario = function () {
+        $http
+        .post("http://localhost:900/upload", $scope.formData)
+        .then(function successCallback(response)  {
+            // $scope.formData = {};
+            $scope.registro = response.data;
+            console.log(response);
+        })
+        
+    //   alert($scope.tel+" "+$scope.cedula)
+        };
  })
 
 

@@ -1,6 +1,6 @@
 const express= require("express");
 const {createReadStream} = require('fs')
-var modelo= require('../usuarios')
+var modelo= require('./usuarios')
 
 const app= new express();
 const HTML_CONTENT_TYPE = 'text/html'
@@ -29,8 +29,8 @@ app.get('/', (req, res) => {
     //res.end("hola mundo");
        
 })
-app.listen(9000, () => {
+app.listen(900, () => {
 
-    console.log("aplicacion corriendo en el puerto 9000")
+    console.log("aplicacion corriendo en el puerto 900")
     
 })
