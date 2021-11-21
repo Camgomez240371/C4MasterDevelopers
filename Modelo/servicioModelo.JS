@@ -9,7 +9,7 @@ const HTML_CONTENT_TYPE = 'text/html'
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
-app.use(express.static("./public")); // direccion de los archivos a los cuales 
+app.use(express.static("public")); // direccion de los archivos a los cuales 
 
 const path = require("path");
 
@@ -54,22 +54,22 @@ app.post("/insertarInmueble", (req, res) => {
         };
         modeloInmueble.collection.insertOne(myobj, function(err, res) {
             if (err) throw err;
-        })
+        });
         console.log(docs[0]._id)
-    })
+    });
 
     res.send("1 documento guardado con exito")
 
-})
+});
 
 app.get('/', (req, res) => {
     res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
     createReadStream('./index.html').pipe(res)
-        //res.end("hola mundo");
-})
+//res.end("hola mundo");
+});
 
 app.listen(900, () => {
 
-    console.log("aplicacion corriendo en el puerto 900")
+    console.log("aplicacion corriendo en el puerto 900");
 
-})
+});
