@@ -64,11 +64,8 @@ app.post("/insertarInmueble", (req, res) => {
 
 app.get('/', (req, res) => {
     res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
-
-
-    createReadStream('index.html').pipe(res)
+    createReadStream('./index.html').pipe(res)
         //res.end("hola mundo");
-
 })
 
 app.listen(900, () => {
