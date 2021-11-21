@@ -1,6 +1,7 @@
 <html ng-app="myApp" id="myApp">
+
 <head>
-    <meta name="viewport" content="width=device-width" /> 
+    <meta name="viewport" content="width=device-width" />
     <title>Master Inmobiliaria</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://kit.fontawesome.com/5d03531c1a.js" crossorigin="anonymous"></script>
@@ -9,38 +10,39 @@
 </head>
 
 <body ng-controller="myController">
-<div id="contenedor">
-    <header><nav>
-        <ul>
-            <li><a href="http://localhost:900/">Inicio</a></li>
-            <li><a href="./inmueble.html">Insertar inmueble </a></li>
-            <li><a href="./ubicacion.html">Insertar ubicacion</a></li>
-            <li><a href="javascript:;" id="lbtnTest">Llamar</a></li>
-        </ul>
-    </nav></header>
-            
-    <div class="menu">
-        <section id="contenido">
-            <form>
-                <h2>Registro Usuarios</h2>
-                <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Cedula" id="cedula" ng-model="formData.cedula"></p>
-                <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Nombres" id="nombre" ng-model="formData.nombre"></p>
-                <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Apellidos" id="apellido" ng-model="formData.apellido"></p>
-                <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Correo Electronico" id="correo" ng-model="formData.correo"></p>
-                <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Celular" id="celular" ng-model="formData.celular"></p>
-                
-                <h3>Id Usuario</h3>
-                <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Usuario" id="user" ng-model="formData.user"></p>
-                <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Contraseña" id="clave" ng-model="formData.clave"></p>
+    <div id="contenedor">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:900/">Inicio</a></li>
+                    <li><a href="./inmueble.html">Insertar inmueble </a></li>
+                    <li><a href="./ubicacion.html">Insertar ubicacion</a></li>
+                </ul>
+            </nav>
+        </header>
 
-                <p><button class="button" ng-click="registrarUsuario()">Registrarse</button></p>
+        <div class="menu">
+            <section id="contenido">
+                <form>
+                    <h2>Registro Usuarios</h2>
+                    <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Cedula" id="cedula" ng-model="formData.cedula"></p>
+                    <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Nombres" id="nombre" ng-model="formData.nombre"></p>
+                    <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Apellidos" id="apellido" ng-model="formData.apellido"></p>
+                    <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Correo Electronico" id="correo" ng-model="formData.correo"></p>
+                    <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Celular" id="celular" ng-model="formData.celular"></p>
 
-                <br>
-                {{registro}}
-            </form>
-        </section>
+                    <h3>Id Usuario</h3>
+                    <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Usuario" id="user" ng-model="formData.user"></p>
+                    <p><i class="fas fa-user icon"></i><input type="text" class="form-control input-lg text-center" placeholder="Contraseña" id="clave" ng-model="formData.clave"></p>
+
+                    <p><button class="button" ng-click="registrarUsuario()">Registrarse</button></p>
+
+                    <br> {{registro}}
+                </form>
+            </section>
+        </div>
     </div>
-</div>
 
 </body>
+
 </html>
