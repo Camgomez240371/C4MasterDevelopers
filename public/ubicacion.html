@@ -27,22 +27,16 @@
 
             </section>
             <section id="contenido">
-                <form>
-                    <h2>Registro Ubicación</h2>
-                    <p><i class="fas fa-map-marked-alt icon"></i>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Zona" id="Zona" ng-model="formData.Zona"></p>
-                    <p><i class="fas fa-map-marker-alt icon"></i>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Barrio" id="Barrio" ng-model="formData.Barrio"></p>
+                <h2>Registro Ubicación</h2>
+                <p><i class="fas fa-map-marked-alt icon"></i>
+                    <input type="text" class="form-control input-lg text-center" placeholder="Zona" id="Zona" ng-model="formData.Zona"></p>
+                <p><i class="fas fa-map-marker-alt icon"></i>
+                    <input type="text" class="form-control input-lg text-center" placeholder="Barrio" id="Barrio" ng-model="formData.Barrio"></p>
+                <p><button class="button" ng-click="RegistrarUbi()">Registrar</button></p>
 
-                    <p><button class="button" ng-click="RegistrarUbi()">Registrar</button></p>
-
-                    <br> {{registro}}
-                </form>
+                <br> {{msj}}
             </section>
-            
         </div>
     </div>
-
 </body>
-
 </html>

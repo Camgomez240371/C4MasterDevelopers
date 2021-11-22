@@ -27,34 +27,27 @@
 
             </section>
             <section id="contenido">
-                <form>
-                    <h2>Registro Usuarios</h2>
-                    <p><i class="fas fa-address-book icon"></i>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Cedula" id="cedula" ng-model="formData.cedula"></p>
-                    <p><i class="fas fa-user icon"></i>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Nombres" id="nombre" ng-model="formData.nombre"></p>
-                    <p><i class="fas fa-user icon"></i>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Apellidos" id="apellido" ng-model="formData.apellido"></p>
-                    <p><i class="fas fa-envelope icon"></i>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Correo Electronico" id="correo" ng-model="formData.correo"></p>
-                    <p><i class="fas fa-mobile-alt icon"></i>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Celular" id="celular" ng-model="formData.celular"></p>
+                <h2>Registro Usuarios</h2>
+                <p><i class="fas fa-address-book icon"></i>
+                    <input type="text" class="form-control input-lg text-center" placeholder="Cedula" id="cedula" ng-model="formData.cedula"></p>
+                <p><i class="fas fa-user icon"></i>
+                    <input type="text" class="form-control input-lg text-center" placeholder="Nombres" id="nombre" ng-model="formData.nombre"></p>
+                <p><i class="fas fa-user icon"></i>
+                    <input type="text" class="form-control input-lg text-center" placeholder="Apellidos" id="apellido" ng-model="formData.apellido"></p>
+                <p><i class="fas fa-envelope icon"></i>
+                    <input type="text" class="form-control input-lg text-center" placeholder="Correo Electronico" id="correo" ng-model="formData.correo"></p>
+                <p><i class="fas fa-mobile-alt icon"></i>
+                    <input type="text" class="form-control input-lg text-center" placeholder="Celular" id="celular" ng-model="formData.celular"></p>
+                <h3>Id Usuario</h3>
+                <p><i class="fas fa-user icon"></i>
+                    <input type="text" class="form-control input-lg text-center" placeholder="Usuario" id="user" ng-model="formData.user"></p>
+                <p><i class="fas fa-key icon"></i>
+                    <input type="password" class="form-control input-lg text-center" placeholder="Contraseña" id="clave" ng-model="formData.clave"></p>
+                <p><button class="button" ng-click="registrarUsuario()">Registrarse</button></p>
 
-                    <h3>Id Usuario</h3>
-                    <p><i class="fas fa-user icon"></i>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Usuario" id="user" ng-model="formData.user"></p>
-                    <p><i class="fas fa-key icon"></i>
-                        <input type="text" class="form-control input-lg text-center" placeholder="Contraseña" id="clave" ng-model="formData.clave"></p>
-
-                    <p><button class="button" ng-click="registrarUsuario()">Registrarse</button></p>
-
-                    <br> {{registro}}
-                </form>
-            </section>
-            
+                <br> {{msj}}
+            </section> 
         </div>
     </div>
-
 </body>
-
 </html>

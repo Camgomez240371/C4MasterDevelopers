@@ -2,7 +2,7 @@ const express = require("express");
 const { createReadStream } = require('fs')
 var modelo = require('./usuarios')
 var modeloUbicacion = require('./ubicacion');
-var modeloInmueble = require('./inmuebles');
+var modeloInmueble = require('./Inmuebles');
 
 const app = new express();
 const HTML_CONTENT_TYPE = 'text/html'
@@ -16,24 +16,30 @@ const path = require("path");
 require('./conexion_bd') // solicita la conexion a la base de datos en Mongo
 
 app.post("/upload", (req, res) => {
-    var myobj = { cedula: req.body.cedula, nombre: req.body.nombre, apellido: req.body.apellido, correo: req.body.correo, celular: req.body.celular, user: req.body.user, clave: req.body.clave };
+    var myobj = { cedula: req.body.cedula,
+                  nombre: req.body.nombre, 
+                  apellido: req.body.apellido,
+                  correo: req.body.correo, 
+                  celular: req.body.celular, 
+                  user: req.body.user, 
+                  clave: req.body.clave };
     modelo.collection.insertOne(myobj, function(err, res) {
         if (err) throw err;
 
     })
-    res.send("1 documento guardado con exito")
+    res.send("upload documento guardado con exito")
 })
 
 ///////insertar ubicacion
 
 app.post("/insertarUbicacion", (req, res) => {
-    const num = 9
+
     var myobj = { zona: req.body.Zona, barrio: req.body.Barrio };
     modeloUbicacion.collection.insertOne(myobj, function(err, res) {
         if (err) throw err;
 
     });
-    res.send("1 documento guardado con exito");
+    res.send("ubicacion guardada con exito");
 });
 
 app.post("/insertarInmueble", (req, res) => {
@@ -58,7 +64,7 @@ app.post("/insertarInmueble", (req, res) => {
         console.log(docs[0]._id)
     });
 
-    res.send("1 documento guardado con exito")
+    res.send("inmueble documento guardado con exito")
 
 });
 

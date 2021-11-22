@@ -5,16 +5,24 @@ ngApp.controller('myController', function($scope, $http) {
     $scope.getData = function() {
         return 'qubernet';
     }
+
     $scope.registrarUsuario = function() {
         $http
             .post("http://localhost:900/upload", $scope.formData)
             .then(function successCallback(response) {
                 // $scope.formData = {};
-                $scope.registro = response.data;
+                $scope.msj = response.data;
                 console.log(response);
-            })
-
-        //   alert($scope.tel+" "+$scope.cedula)
+            });
+        document.getElementById("cedula").value = "";
+        document.getElementById("nombre").value = "";
+        document.getElementById("apellido").value = "";
+        document.getElementById("correo").value = "";
+        document.getElementById("celular").value = "";
+        document.getElementById("user").value = "";
+        document.getElementById("clave").value = "";
+        };
+        
         $scope.RegistrarInmueble = function() {
             $scope.msj = "cargando...";
             $http.post("http://localhost:900/insertarInmueble", $scope.formData)
@@ -22,7 +30,16 @@ ngApp.controller('myController', function($scope, $http) {
                     $scope.msj = response.data;
                     console.log(response);
                 });
+            document.getElementById("Nombre").value = "";
+            document.getElementById("Tipo").value = "";
+            document.getElementById("Barrio").value = "";
+            document.getElementById("Transaccion").value = "";
+            document.getElementById("Banios").value = "";
+            document.getElementById("habitaciones").value = "";
+            document.getElementById("Estrato").value = "";
+            document.getElementById("Precio").value = "";
         };
+
         $scope.RegistrarUbi = function() {
             $scope.msj = "cargando...";
             $http.post("http://localhost:900/insertarUbicacion", $scope.formData)
@@ -30,8 +47,9 @@ ngApp.controller('myController', function($scope, $http) {
                     $scope.msj = response.data;
                     console.log(response);
                 });
+            document.getElementById("Zona").value = "";
+            document.getElementById("Barrio").value = "";
         };
-    };
 });
 
 
