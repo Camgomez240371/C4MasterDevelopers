@@ -3,17 +3,32 @@ const { createReadStream } = require('fs')
 var modelo = require('./usuarios')
 var modeloUbicacion = require('./ubicacion');
 var modeloInmueble = require('./Inmuebles');
+var cors = require('cors');
 
 const app = new express();
 const HTML_CONTENT_TYPE = 'text/html'
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use(express.static("public")); // direccion de los archivos a los cuales 
 
 const path = require("path");
 
 require('./conexion_bd') // solicita la conexion a la base de datos en Mongo
+
+app.put("/registrarInmueble", (req,res) => {
+    console.log("llego al final el prrro");
+    const respuesta={
+        nombre: req.body.nombre,
+        tipo: req.body.tipo
+    }
+    modelo.collection.insertOne(respuesta, function(err, res) {
+        if (err) throw err;
+
+    })
+    res.send(JSON.stringify(respuesta))
+});
 
 app.post("/upload", (req, res) => {
     var myobj = { cedula: req.body.cedula,
@@ -42,6 +57,8 @@ app.post("/insertarUbicacion", (req, res) => {
     res.send("ubicacion guardada con exito");
 });
 
+
+
 app.post("/insertarInmueble", (req, res) => {
 
     modeloUbicacion.find({ barrio: req.body.Barrio }, (err, docs) => {
@@ -66,6 +83,17 @@ app.post("/insertarInmueble", (req, res) => {
 
     res.send("inmueble documento guardado con exito")
 
+});
+
+app.get("/consulta", (req, res) => {
+    console.log("econectado -----S");
+   // res.send("ubicacion guardada con exito");
+   const datos={
+       nombre:"Peter",
+       apellido:"Perea"
+   }
+   res.end(JSON.stringify(datos));
+   console.log(JSON.stringify(datos))
 });
 
 app.get('/', (req, res) => {
